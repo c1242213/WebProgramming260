@@ -10,3 +10,4 @@
 
 # Ports, port 443: use https connect site to web server
 # AMI: binary file, snapshot, launch an instance of everything we need. 
+df
