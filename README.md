@@ -4,7 +4,7 @@
 ## "One of my favorite activities to pass the time since I was a kid was to fill out coded coloring pictures. The black and white scribbles soon became colorful art after careful color matching precision. With my new project, I hope to digitalize this experience and allow any user to create art by simply selecting a number coordinated color and clicking on a shape of the picture.
 
 # Design
-![Alt Text](./IMG_1028.HEIC)
+![Alt Text](./Pitch.png)
 
 # Key features include:
 ## User Authentication: Secure login and registration for personalized experiences.
