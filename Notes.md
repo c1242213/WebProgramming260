@@ -141,3 +141,5 @@ main{
 
 ### use link
 
+## 10/1
+### new css index.html includes new classes, one that makes the background dark
