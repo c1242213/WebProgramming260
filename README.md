@@ -39,4 +39,13 @@
 
 ### Real-time updates to an art gallery for users to display their art to others. 
 
+# HTML deliverable:
+## HTML pages - I've made a three HTML page for my startup which includes the play, homepage, and about page. Eventually there will be an ability to include your work in a gallery in the scores page. But for now that page just exists. 
+
+## Links - the pages each contain an ability to link to either somewhere else on the website or to another persons work eventually.
+## Images - the pages include options for pictures with a svg image. There is a page to includes the images those are. 
+## Websocket - A message to tell the user that someone else has added to the art gallery can be used. 
+
+
+
 
