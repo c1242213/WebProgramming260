@@ -143,3 +143,18 @@ main{
 
 ## 10/1
 ### new css index.html includes new classes, one that makes the background dark
+
+## 10/3
+## Javascript: compute and function for my website
+### already have a node.js interpreter running. 
+
+console.log('Hello' + ' ' + 'world')
+
+### html
+
+<button onclick ="let i=1;i++;console.log(i)">press me</button>
+<button onclick ="sayHello()</button>
+
+##
+
+
