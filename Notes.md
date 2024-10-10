@@ -155,6 +155,36 @@ console.log('Hello' + ' ' + 'world')
 <button onclick ="let i=1;i++;console.log(i)">press me</button>
 <button onclick ="sayHello()</button>
 
-##
+## 10/8
+### three equal signs
+### 0 == false is true while 0 === false is false
+### **most the time checking strict equality using three equal signs
 
+## functions are first class objects that can be passed
 
+function f(){
+    return 1
+}
+## vs using a variable, use the format to pass in another function as a variable
+f = function(i){
+    return i
+}
+
+## Closure: something that returns a function also returns the local state of that function and remembers local variables.
+
+function dup(dupLimit, sep = ":"){
+    return (t) =>{
+        let dupCount =1; 
+        let out = t;
+        while(dupCount++ < dupLimit){
+            out += sept + t;
+        }
+        return out;
+    };
+}
+
+cont duplicates = dup(4) 
+## dupLimit = 4
+
+return $(this.animal{})
+## points to the actual value. 
