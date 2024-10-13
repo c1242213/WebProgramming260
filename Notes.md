@@ -188,3 +188,42 @@ cont duplicates = dup(4)
 
 return $(this.animal{})
 ## points to the actual value. 
+
+## 10/10
+
+## spread: take an array and serve them by their individual pieces
+
+## manipulate the DOM (document object model)
+const output = document.querySelector('button');
+output.innnerText = msg;
+
+## manipulate DOM recurse through the tree from the point given
+function displayElement(el){
+    consol.log(el.tagName);
+    for (const child of el.children){
+        displayElement(child);
+    }
+}
+displayElement(document);
+
+## add child function to dom
+function insertChild(selector, text){
+     const newChild = document.createEement('div') // instatiate a new element <div><div>
+     newChild.textContent = text;
+
+     const parentElement = document.querySelector(selector) // find parent
+     parentElement.appendChild(newChild);
+}
+insertChild('#t', 'new course');
+
+## event handler:
+
+const submitDataEl = document.querySelector('#t');
+submitDataEl.addEventListener('click', function (event)){
+    console.log('clicked');
+};
+
+## local storage: global variable
+localStorage.setItem('user', user)
+
+console.log(localStorage.getItem('user'));

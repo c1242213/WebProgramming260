@@ -46,6 +46,12 @@
 ## Images - the pages include options for pictures with a svg image. There is a page to includes the images those are. 
 ## Websocket - A message to tell the user that someone else has added to the art gallery can be used. 
 
+# CSS deliverable
+## CSS pages - I've successfully created 4 pages for the user that includes new updated HTML that incorporates their own css file. These files use bootstrap to better design the pages.
+### The login and about page - the login and the about page uses CSS to design a clean header and footer that is used in all the pages. It remains similar to the html design but with new color and window resizing
 
+### Play page - My gallery page uses the table design in css to move the pictures the the gallery based on the sizing of the window. It also shows that the user is going to select that image if they hover over the picture. 
+
+### Gallery page - the gallery page has maintained a similar structure to the html update but uses thumbnail to display the pictures. 
 
 

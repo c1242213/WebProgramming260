@@ -5,52 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Picture Perfect</title>
     <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="play.css" />
+
+    <!-- Include Bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
   </head>
-  <body>
-    <header>
-      <h1>Picture Perfect</h1>
-      <nav>
-        <menu>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="play.html">Play</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
+  <body class="bg-dark text-light">
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Picture Perfect<sup>&reg;</sup></a>
+        <menu class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="play.html">Play</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         </menu>
       </nav>
-      <hr />
     </header>
 
-    <main>
-      <!-- SVG Image Choices -->
-      <section id="image-options">
-        <h2>Select an Image to Color</h2>
-        <div class="image-choice">
-          <img src="svg-images/farm-pig.svg" alt="SVG Image 1" width="200" height="200" />
+    <main class="bg-secondary">
+      <div class="players">
+        Artist
+        <span class="player-name">Mystery artist</span>
+        <div id="player-messages">
+          <div class="event"><span class="player-event">Linus</span> added to the gallery</div>
+          <div class="event"><span class="player-event">Linus</span> started a new drawing</div>
+          <div class="event"><span class="system-event">game</span> connected</div>
         </div>
-        <div class="image-choice">
-          <img src="svg-images/barn-farm.svg" alt="SVG Image 2" width="200" height="200" />
-        </div>
-        <!-- Add more image choices as needed -->
-      </section>
+      </div>
 
-      <br />
+      <!-- Sticky Title for Image Grid -->
+      <div class="sticky-title">
+        <h2>Pick a Picture</h2>
+      </div>
 
-      <!-- Color Palette -->
-      <section id="color-palette">
-        <h2>Select a Color</h2>
-        <div class="color-box" style="background-color: red; width: 50px; height: 50px;"></div>
-        <div class="color-box" style="background-color: blue; width: 50px; height: 50px;"></div>
-        <div class="color-box" style="background-color: green; width: 50px; height: 50px;"></div>
-        <!-- Add more color boxes as needed -->
-      </section>
-
+      <!-- Image Choices in a Responsive Grid -->
+      <div class="image-grid">
+        <img src="svg-images/farm-pig.svg" alt="SVG Image 1" class="img-choice" />
+        <img src="svg-images/barn-farm.svg" alt="SVG Image 2" class="img-choice" />
+        <img src="svg-images/horse-racing.svg" alt="SVG Image 3" class="img-choice" />
+        <img src="svg-images/halloween-night-owl-on-a-branch.svg" alt="SVG Image 4" class="img-choice" />
+        <!-- Add more images as needed -->
+      </div>
     </main>
 
-    <footer>
-      <hr />
-      <span class="text-reset">Author Name(s)</span>
-      <br />
-      <a href="https://github.com/c1242213/WebProgramming260">GitHub</a>
+    <footer class="bg-dark text-white-50">
+      <div class="container-fluid">
+        <span class="text-reset">Author Name(s)</span>
+        <a class="text-reset" href="https://github.com/c1242213/WebProgramming260">Source</a>
+      </div>
     </footer>
   </body>
 </html>
