@@ -227,3 +227,22 @@ submitDataEl.addEventListener('click', function (event)){
 localStorage.setItem('user', user)
 
 console.log(localStorage.getItem('user'));
+
+# 10/15
+
+## promise vs await 
+### promise
+coinToss
+.then((result)) => concole.log('Toss result': )
+
+### await
+
+## review
+##  use a for hyperlink 
+
+# 10/24
+# single page application: One page that components DOM injection
+
+# simon react
+## copy over css files, install npm and vite stuff in new file.
+## 
