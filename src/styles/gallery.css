@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  padding-top: 40px; /* Ensures content starts below fixed header */
+}
+
+.navbar {
+  padding: 0.25rem 0.5rem; /* Further reduced padding for compact header */
+}
+
+.navbar-brand {
+  font-size: 1em; /* Smaller font size for brand text */
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.85em; /* Smaller font size for nav links */
+  color: #f8f9fa;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em; /* Slightly smaller font size for h2 */
+  color: #ffc107;
+  margin-top: 1rem;
+}
+
+/* Table Styles */
+.table {
+  margin-top: 20px;
+}
+
+td {
+  max-width: 40vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Thumbnail Image Styling */
+td img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+td img:hover {
+  transform: scale(1.1);
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
