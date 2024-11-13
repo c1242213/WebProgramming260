@@ -1,0 +1,114 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styling */
+header {
+  padding-top: 40px; /* Ensures content starts below fixed header */
+}
+
+.navbar {
+  padding: 0.25rem 0.5rem; /* Compact header */
+}
+
+.navbar-brand {
+  font-size: 1em; /* Smaller font size for brand text */
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.85em; /* Smaller font size for nav links */
+  color: #f8f9fa;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 1.5em;
+  color: #ffc107;
+  margin-top: 1rem;
+}
+
+/* Table Styles */
+.table {
+  margin-top: 20px;
+}
+
+.table-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+/* Table cell styling for images */
+td {
+  max-width: 40vw;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.table-striped-columns tbody tr:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+
+/* Thumbnail Image Styling */
+td img {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  width: 100px; /* Set a fixed width for gallery thumbnails */
+  height: auto;
+  object-fit: cover;
+}
+
+td img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Footer Styling */
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 0;
+  color: #adb5bd;
+  background-color: #212529;
+}
+
+footer a {
+  color: #ffc107;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  td img {
+    width: 80px; /* Slightly smaller thumbnail on small screens */
+  }
+  h2 {
+    font-size: 1.25em;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    padding-top: 20px;
+  }
+  footer {
+    padding: 5px 0;
+  }
+  .navbar-brand {
+    font-size: 0.9em;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.75em;
+  }
+}
