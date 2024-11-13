@@ -48,10 +48,14 @@
 
 # CSS deliverable
 ## CSS pages - I've successfully created 4 pages for the user that includes new updated HTML that incorporates their own css file. These files use bootstrap to better design the pages.
-### The login and about page - the login and the about page uses CSS to design a clean header and footer that is used in all the pages. It remains similar to the html design but with new color and window resizing
+### The login and about page - the login and the about page uses CSS to design a clean header and footer that is used in all the pages. It remains similar to the html design but w             ith new color and window resizing
 
 ### Play page - My gallery page uses the table design in css to move the pictures the the gallery based on the sizing of the window. It also shows that the user is going to select that image if they hover over the picture. 
 
 ### Gallery page - the gallery page has maintained a similar structure to the html update but uses thumbnail to display the pictures. 
 
-
+# React deliverables
+## the css pages work with my jsx pages to allow the user to color the picture of their choosing. 
+## clicking on a color selects the color and clicking on the part of the svg image colors the shape of the svg image. 
+## the user cannot start playing the game until they have login or created an account successfully. 
+## after saving your art it is notified that the image is saved to the art gallery. 
