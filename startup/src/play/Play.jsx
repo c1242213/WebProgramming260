@@ -1,37 +1,43 @@
-// src/components/Play.jsx
-import React from 'react';
-import Header from components
-import Footer from components
+import React, { useState } from 'react';
+import './play.css';
+import dogImage from '../assets/dog.svg'; // Example path
 
-const Play = () => {
+export function Play() {
+  const [selectedColor, setSelectedColor] = useState('#000000');
+
+  // Available colors
+  const colors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#FFC300', '#8E44AD'];
+
+  // Handle click on SVG parts
+  const handleSvgClick = (event) => {
+    if (event.target.tagName === 'path' || event.target.tagName === 'rect' || event.target.tagName === 'circle' || event.target.tagName === 'polygon') {
+      event.target.setAttribute('fill', selectedColor);
+    }
+  };
+
   return (
-    <div className="bg-dark text-light">
-      <Header />
-      <main className="bg-secondary">
-        <div className="players">
-          Artist
-          <span className="player-name">Mystery artist</span>
-          <div id="player-messages">
-            <div className="event"><span className="player-event">Linus</span> added to the gallery</div>
-            <div className="event"><span className="player-event">Linus</span> started a new drawing</div>
-            <div className="event"><span className="system-event">game</span> connected</div>
-          </div>
-        </div>
+    <main className='play-container'>
+      <h2>Color the Dog!</h2>
 
-        <div className="sticky-title">
-          <h2>Pick a Picture</h2>
-        </div>
+      <div className='svg-container' onClick={handleSvgClick}>
+        <object
+          type='image/svg+xml'
+          data={dogImage}
+          className='coloring-svg'
+          aria-label='Dog Image'
+        />
+      </div>
 
-        <div className="image-grid">
-          <img src="svg-images/farm-pig.svg" alt="SVG Image 1" className="img-choice" />
-          <img src="svg-images/barn-farm.svg" alt="SVG Image 2" className="img-choice" />
-          <img src="svg-images/horse-racing.svg" alt="SVG Image 3" className="img-choice" />
-          <img src="svg-images/halloween-night-owl-on-a-branch.svg" alt="SVG Image 4" className="img-choice" />
-        </div>
-      </main>
-      <Footer />
-    </div>
+      <div className='color-picker'>
+        {colors.map((color) => (
+          <button
+            key={color}
+            className='color-square'
+            style={{ backgroundColor: color }}
+            onClick={() => setSelectedColor(color)}
+          />
+        ))}
+      </div>
+    </main>
   );
-};
-
-export default Play;
+}
