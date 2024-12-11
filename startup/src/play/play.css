@@ -1,59 +1,39 @@
-/* Play Container */
-.play-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+
+.svg-container {
+    background-color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    display: inline-block;
+    margin: 20px auto;
   }
   
-  /* SVG Display Area */
-  .svg-container {
-    width: 60%;
-    height: auto;
-    margin: 20px 0;
-    border: 2px solid #ccc;
-  }
-  
-  /* SVG Object */
-  .coloring-svg {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-  }
-  
-  /* Color Picker */
+  /* Color Picker Layout */
   .color-picker {
     display: flex;
+    justify-content: center;
     gap: 10px;
+    margin: 20px 0;
   }
   
+  /* Color Squares */
   .color-square {
-    width: 40px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.2s;
+    display: inline-block;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
   }
   
   .color-square:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   
-  .controls {
+  .color-square.selected {
+    border: 4px solid #000;
+  }
+  
+  /* Selected Color Controls */
+  .controls h3 {
+    text-align: center;
     margin-top: 20px;
-  }
-  .color-box {
-    width: 50px; /* Increase size */
-    height: 50px; /* Increase size */
-    margin: 5px;
-    display: inline-block;
-    cursor: pointer;
-    border: 2px solid #ffffff; /* Optional: Add a border */
-    transition: transform 0.2s; /* Optional: Add a hover effect */
-  }
-  
-  .color-box:hover {
-    transform: scale(1.2); /* Slightly enlarge on hover */
   }
   
