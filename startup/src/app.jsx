@@ -18,8 +18,9 @@ function App() {
       <div className='body bg-dark text-light'>
         <header className='container-fluid'>
           <nav className='navbar fixed-top navbar-dark'>
+            {/* Updated Brand Name */}
             <div className='navbar-brand'>
-              Simon<sup>&reg;</sup>
+              Picture Perfect<sup>&reg;</sup>
             </div>
             <menu className='navbar-nav'>
               <li className='nav-item'>

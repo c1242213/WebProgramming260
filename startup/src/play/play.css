@@ -1,0 +1,59 @@
+/* Play Container */
+.play-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* SVG Display Area */
+  .svg-container {
+    width: 60%;
+    height: auto;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+  }
+  
+  /* SVG Object */
+  .coloring-svg {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  /* Color Picker */
+  .color-picker {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-square {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s;
+  }
+  
+  .color-square:hover {
+    transform: scale(1.2);
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  .color-box {
+    width: 50px; /* Increase size */
+    height: 50px; /* Increase size */
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid #ffffff; /* Optional: Add a border */
+    transition: transform 0.2s; /* Optional: Add a hover effect */
+  }
+  
+  .color-box:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+  }
+  
