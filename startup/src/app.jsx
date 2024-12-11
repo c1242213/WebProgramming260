@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
-import { Play } from 'play/play';
-import { Scores } from './gallery/Gallery';
-import { About } from 'about/about';
+import { Play } from './play/play';
+import { Scores } from './scores/scores';
+import { About } from './about/about';
 import { AuthState } from './login/authState';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
@@ -74,7 +74,7 @@ function App() {
         <footer className='bg-dark text-dark text-muted'>
           <div className='container-fluid'>
             <span className='text-reset'>Author Name(s)</span>
-            <a className='text-reset' href='https://github.com/webprogramming260/simon-react'>
+            <a className='text-reset' href='https://github.com/c1242213/WebProgramming260'>
               Source
             </a>
           </div>
