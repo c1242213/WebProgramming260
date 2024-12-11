@@ -52,7 +52,7 @@ export function Play({ userName }) {
           <circle cx="53" cy="35" r="2" fill="white" stroke="#000000" strokeWidth="1" />
 
           {/* Right Eye pupil */}
-          <circle cx="53" cy="35" r="1" fill="black"  />
+          <circle cx="53" cy="35" r="1" fill="black" />
 
           {/* Nose */}
           <circle cx="50" cy="38" r="1.5" fill="black" />
