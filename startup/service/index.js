@@ -92,6 +92,4 @@ function updateScores(newScore, scores) {
   if (scores.length > 10) {
     scores.length = 10;
   }
-
-  return scores;
 }
