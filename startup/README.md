@@ -59,3 +59,6 @@
 ## clicking on a color selects the color and clicking on the part of the svg image colors the shape of the svg image. 
 ## the user cannot start playing the game until they have login or created an account successfully. 
 ### I have deployed this and moved on before getting it graded but its completed with a working website. 
+
+# Service deliverables
+## NodeJS is a runtime environment that allows my website to run javascript on the backend
