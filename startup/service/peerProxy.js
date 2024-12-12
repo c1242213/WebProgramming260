@@ -1,26 +1,24 @@
 const { WebSocketServer } = require('ws');
 const uuid = require('uuid');
 
+// Keep track of all current connections
+let connections = [];
+
 function peerProxy(httpServer) {
-  // Create a websocket object
   const wss = new WebSocketServer({ noServer: true });
 
-  // Handle the protocol upgrade from HTTP to WebSocket
   httpServer.on('upgrade', (request, socket, head) => {
     wss.handleUpgrade(request, socket, head, function done(ws) {
       wss.emit('connection', ws, request);
     });
   });
 
-  // Keep track of all the connections so we can forward messages
-  let connections = [];
-
   wss.on('connection', (ws) => {
     const connection = { id: uuid.v4(), alive: true, ws: ws };
     connections.push(connection);
 
-    // Forward messages to everyone except the sender
-    ws.on('message', function message(data) {
+    // Forward client messages to every other client
+    ws.on('message', (data) => {
       connections.forEach((c) => {
         if (c.id !== connection.id) {
           c.ws.send(data);
@@ -28,25 +26,21 @@ function peerProxy(httpServer) {
       });
     });
 
-    // Remove the closed connection so we don't try to forward anymore
     ws.on('close', () => {
-      const pos = connections.findIndex((o, i) => o.id === connection.id);
-
+      const pos = connections.findIndex((o) => o.id === connection.id);
       if (pos >= 0) {
         connections.splice(pos, 1);
       }
     });
 
-    // Respond to pong messages by marking the connection alive
     ws.on('pong', () => {
       connection.alive = true;
     });
   });
 
-  // Keep active connections alive
+  // Keep connections alive
   setInterval(() => {
     connections.forEach((c) => {
-      // Kill any connection that didn't respond to the ping last time
       if (!c.alive) {
         c.ws.terminate();
       } else {
@@ -57,4 +51,12 @@ function peerProxy(httpServer) {
   }, 10000);
 }
 
-module.exports = { peerProxy };
+// New function to let the server broadcast an event to all clients
+function broadcastEvent(eventType, eventData) {
+  const message = JSON.stringify({ event: eventType, data: eventData });
+  connections.forEach((c) => {
+    c.ws.send(message);
+  });
+}
+
+module.exports = { peerProxy, broadcastEvent };
