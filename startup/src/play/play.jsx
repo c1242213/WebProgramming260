@@ -15,6 +15,35 @@ export function Play({ userName }) {
     }
   };
 
+  const handleSave = () => {
+    const svgElement = document.querySelector('.coloring-svg');
+    if (!svgElement) return;
+
+    // Serialize SVG
+    const serializer = new XMLSerializer();
+    const svgString = serializer.serializeToString(svgElement);
+
+    // Encode the SVG as a data URL
+    const encodedData = encodeURIComponent(svgString);
+    const dataUrl = `data:image/svg+xml;charset=utf-8,${encodedData}`;
+
+    // Retrieve existing saved artworks or initialize a new array
+    const savedArtworks = JSON.parse(localStorage.getItem('artworks') || '[]');
+
+    // Add the new artwork
+    savedArtworks.push({
+      user: userName,
+      imageData: dataUrl,
+      date: new Date().toISOString()
+    });
+
+    // Store it back to localStorage
+    localStorage.setItem('artworks', JSON.stringify(savedArtworks));
+
+    // You could optionally show a message:
+    alert('Your colored image has been saved!');
+  };
+
   return (
     <div className='play-container'>
       <h2>Color the picture!</h2>
@@ -30,36 +59,26 @@ export function Play({ userName }) {
           onClick={handleSvgClick} // Attach the click handler
         >
           <title>Simple Dog</title>
-
           {/* Body */}
           <ellipse cx="50" cy="60" rx="20" ry="15" fill="white" stroke="#000000" strokeWidth="2" />
-
           {/* Head */}
           <circle cx="50" cy="35" r="10" fill="white" stroke="#000000" strokeWidth="2" />
-
           {/* Left Ear */}
           <ellipse cx="40" cy="30" rx="4" ry="7" fill="white" stroke="#000000" strokeWidth="2" />
-
           {/* Right Ear */}
           <ellipse cx="60" cy="30" rx="4" ry="7" fill="white" stroke="#000000" strokeWidth="2" />
-
           {/* Left Eye */}
           <circle cx="47" cy="35" r="2" fill="white" stroke="#000000" strokeWidth="1" />
           {/* Left Eye pupil */}
           <circle cx="47" cy="35" r="1" fill="black" />
-
           {/* Right Eye */}
           <circle cx="53" cy="35" r="2" fill="white" stroke="#000000" strokeWidth="1" />
-
           {/* Right Eye pupil */}
           <circle cx="53" cy="35" r="1" fill="black" />
-
           {/* Nose */}
           <circle cx="50" cy="38" r="1.5" fill="black" />
-
           {/* Mouth */}
           <path d="M48 40 Q50 42, 52 40" stroke="#000000" strokeWidth="1" fill="none" />
-
           {/* Legs (Circular) */}
           <circle cx="45" cy="75" r="3" fill="white" stroke="#000000" strokeWidth="2" />
           <circle cx="55" cy="75" r="3" fill="white" stroke="#000000" strokeWidth="2" />
@@ -89,6 +108,11 @@ export function Play({ userName }) {
         <h3 style={{ color: 'black' }}>
           Selected Color: <span>{selectedColor}</span>
         </h3>
+      </div>
+
+      {/* Save Button */}
+      <div className='controls'>
+        <button onClick={handleSave}>Save My Artwork</button>
       </div>
     </div>
   );
