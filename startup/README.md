@@ -62,3 +62,5 @@
 
 # Service deliverables
 ## NodeJS is a runtime environment that allows my website to run javascript on the backend
+## Call third party endpoints using fetch to recieve data from external APIs 
+## My application uses port 4000 for my local environment. 
