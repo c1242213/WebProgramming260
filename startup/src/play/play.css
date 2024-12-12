@@ -1,60 +1,62 @@
+/* Make the entire play area center its content both horizontally and vertically */
+.play-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full screen height */
+  background: #f8f9fa; /* Light background for visibility */
+}
 
+/* Center the SVG with some padding and styling */
 .svg-container {
-    background-color: white; 
-    padding: 20px; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    display: inline-block;
-    margin: 20px auto;
-  }
-  
-  /* Color Picker Layout */
-  .color-picker {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-  }
-  
-  /* Color Squares */
-  .color-square {
-    display: inline-block;
-    border-radius: 4px;
-    transition: transform 0.2s ease;
-  }
-  
-  .color-square:hover {
-    transform: scale(1.1);
-  }
-  
-  .color-square.selected {
-    border: 4px solid #000;
-  }
-  
-  /* Selected Color Controls */
-  .controls h3 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .controls button {
-    background-color: #4CAF50; 
-    color: white;
-    padding: 10px 20px;
-    margin: 20px auto;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-  }
-  
-  .controls button:hover {
-    background-color: #45a049;
-  }
-  .play-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; /* Full screen height */
-    background: #f8f9fa; /* Light background for visibility */
+  background-color: white; 
+  padding: 20px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  /* No need for inline-block or auto margins since parent is flex */
+}
+
+/* Color Picker Layout */
+.color-picker {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Color Squares */
+.color-square {
+  display: inline-block;
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.color-square:hover {
+  transform: scale(1.1);
+}
+
+.color-square.selected {
+  border: 4px solid #000;
+}
+
+/* Selected Color Controls */
+.controls h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.controls button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+.controls button:hover {
+  background-color: #45a049;
 }
