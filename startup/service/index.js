@@ -1,6 +1,4 @@
-const express = require('express');
-const uuid = require('uuid');
-const app = express();
+
 
 // The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = {};
@@ -92,4 +90,6 @@ function updateScores(newScore, scores) {
   if (scores.length > 10) {
     scores.length = 10;
   }
+
+  return scores;
 }
