@@ -1,53 +1,36 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
 import './scores.css';
 
 export function Scores() {
-  const [scores, setScores] = React.useState([]);
+  const [artworks, setArtworks] = useState([]);
 
-  // Demonstrates calling a service asynchronously so that
-  // React can properly update state objects with the results.
-  React.useEffect(() => {
-    const scoresText = localStorage.getItem('scores');
-    if (scoresText) {
-      setScores(JSON.parse(scoresText));
+  useEffect(() => {
+    const saved = localStorage.getItem('artworks');
+    if (saved) {
+      setArtworks(JSON.parse(saved));
     }
   }, []);
 
-  // Demonstrates rendering an array with React
-  const scoreRows = [];
-  if (scores.length) {
-    for (const [i, score] of scores.entries()) {
-      scoreRows.push(
-        <tr key={i}>
-          <td>{i}</td>
-          <td>{score.name.split('@')[0]}</td>
-          <td>{score.score}</td>
-          <td>{score.date}</td>
-        </tr>
-      );
-    }
-  } else {
-    scoreRows.push(
-      <tr key='0'>
-        <td colSpan='4'>Be the first to score</td>
-      </tr>
-    );
-  }
-
   return (
     <main className='container-fluid bg-secondary text-center'>
-      <table className='table table-warning table-striped-columns'>
-        <thead className='table-dark'>
-          <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Score</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody id='scores'>{scoreRows}</tbody>
-      </table>
+      <h2>Your Saved Artworks</h2>
+      <div className='artwork-gallery'>
+        {artworks.length > 0 ? (
+          artworks.map((art, index) => (
+            <div key={index} className='art-item'>
+              <img
+                src={art.imageData}
+                alt={`Artwork by ${art.user}`}
+                className='saved-art-img'
+              />
+              <p><strong>User:</strong> {art.user.split('@')[0]}</p>
+              <p><strong>Date:</strong> {new Date(art.date).toLocaleString()}</p>
+            </div>
+          ))
+        ) : (
+          <p>No artworks saved yet. Go color something!</p>
+        )}
+      </div>
     </main>
   );
 }
