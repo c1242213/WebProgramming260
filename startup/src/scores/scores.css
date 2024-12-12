@@ -1,6 +1,30 @@
-td {
-  max-width: 40vw;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.container-fluid {
+  padding: 20px;
+}
+
+.artwork-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.art-item {
+  background: #fff;
+  border: 2px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+}
+
+.saved-art-img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.art-item p {
+  margin: 5px 0;
+  font-size: 0.9rem;
 }
