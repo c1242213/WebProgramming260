@@ -58,9 +58,17 @@
 ## the css pages work with my jsx pages to allow the user to color the picture of a dog. 
 ## clicking on a color selects the color and clicking on the part of the svg image colors the shape of the svg image. 
 ## the user cannot start playing the game until they have login or created an account successfully. 
-### I have deployed this and moved on before getting it graded but its completed with a working website. 
+
+### note** I have deployed this and moved on before getting it graded but its completed with a working website and 10 commits. 
 
 # Service deliverables
 ## NodeJS is a runtime environment that allows my website to run javascript on the backend
 ## Call third party endpoints using fetch to recieve data from external APIs 
 ## My application uses port 4000 for my local environment. 
+
+### note** I have deployed this and moved on before getting it graded but its completed with a working website and 10 commits. 
+
+# Login Deliverables
+## The Database allows for the user to create an account and then store that account in the database, this way their account will be remembered. 
+## The course uses Mongo which increases developer productivity by using JSON objects as its core data model.
+## the collection uses a large array of Javascript objects each with a unique ID. 
