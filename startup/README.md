@@ -72,3 +72,7 @@
 ## The Database allows for the user to create an account and then store that account in the database, this way their account will be remembered. 
 ## The course uses Mongo which increases developer productivity by using JSON objects as its core data model.
 ## the collection uses a large array of Javascript objects each with a unique ID. 
+
+# WebSocket Deliverables
+## rather than communicating between users the images that they have each created, I changed the game to use a counter to find the number of times a user has saved an image. 
+## Using websocket, the user is notified about the top saved user score and what that value is. 
